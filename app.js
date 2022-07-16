@@ -6,10 +6,10 @@ var serverURL="https://api.funtranslations.com/translate/ferb-latin.json";
 function constructURL(text){
     return serverURL + "?" + "text=" + text
 }
-function errorhandler(error) {
-   console.log("error occured",error);
-   alert("some thing went wrong please try again later");
-}
+//function errorhandler(error) {
+  // console.log("error occured",error);
+   //alert("some thing went wrong please try again later");
+//}
 function clickHandler(){
     var inputtxt=txtinput.value
 
@@ -18,7 +18,7 @@ function clickHandler(){
     .then(json => {
           
         txtoutput.innerText = json.contents.translated})
-   .catch(errorhandler);
+   //.catch(errorhandler);
 
     }
     
